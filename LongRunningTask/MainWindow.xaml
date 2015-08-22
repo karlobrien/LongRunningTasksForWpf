@@ -1,0 +1,16 @@
+﻿<Window x:Class="LongRunningTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ComboBox Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  ItemsSource="{Binding Hints}"
+                  IsEditable="True" HorizontalAlignment="Left" Margin="88,22,0,0" VerticalAlignment="Top" Width="224"/>
+
+        <ComboBox ItemsSource="{Binding ModelHints}"
+                  IsEditable="True" HorizontalAlignment="Left" Margin="88,67,0,0" VerticalAlignment="Top" Width="224"/>
+
+        <Label Content="{Binding LongRunString}"></Label>
+
+    </Grid>
+</Window>
